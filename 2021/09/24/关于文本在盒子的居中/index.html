@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="test, LerBok">
+    <meta name="keywords" content="关于文本在盒子的居中, LerBok">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>test | LerBok</title>
+    <title>关于文本在盒子的居中 | LerBok</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">test</h1>
+                    <h1 class="description center-align post-title">关于文本在盒子的居中</h1>
                 </div>
             </div>
         </div>
@@ -431,14 +431,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%88%B1%E4%BD%A0%E5%93%A6/">
-                                <span class="chip bg-color">爱你哦</span>
+                            <a href="/tags/%E6%A0%B7%E5%BC%8F%E5%B8%83%E5%B1%80/">
+                                <span class="chip bg-color">样式布局</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/html/" class="post-category">
+                                html
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -468,10 +477,48 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>  1123</p>
-<p>23123123 </p>
-<p> <a href="www.baidu.com">没有人在这里</a></p>
-<p><code>internet</code></p>
+                <p>在样式布局中，我们经常碰到需要将元素居中。通过css实现元素的水平居中较为简单：对文本，只需要对其父级元素设置text-align: center;，而对div等块级元素，只需要设置其left和right的margin值为auto。要实现元素的垂直居中，有人会想到css中的vertical-align属性，但是它只对拥有valign特性的元素才生效，例如表格元素中的<td>、<th>、<caption>等，而像<div>、<span>这样的元素是没有valign特性的，因此使用vertical-align对它们不起作用。因此我们需要通过别的方法去实现元素的垂直居中，下面我总结了几种了常用垂直居中方法</p>
+<h3 id="1-单行文本垂直居中"><a href="#1-单行文本垂直居中" class="headerlink" title="1.单行文本垂直居中"></a><strong>1.单行文本垂直居中</strong></h3><p>对于单行文本，我们只需要将文本行高(line-height)和所在区域高度(height)设为一致即可：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--html代码--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div1&quot;</span>&gt;</span></span><br><span class="line">        这是单行文本垂直居中</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">/*css代码*/</span><br><span class="line">        /*方式一*/</span><br><span class="line">        #div1&#123;</span><br><span class="line">            width: 300px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            margin: 50px auto;</span><br><span class="line">            border: 1px solid red;</span><br><span class="line">        &#125;</span><br><span class="line">        /*方式二*/</span><br><span class="line">        #div1&#123;</span><br><span class="line">            height: 100px;</span><br><span class="line">            line-height: 100px; /*设置line-height与父级元素的height相等*/</span><br><span class="line">            text-align: center; /*设置文本水平居中*/</span><br><span class="line">            overflow: hidden; /*防止内容超出容器或者产生自动换行*/ </span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.多行文本垂直居中<br>多行文本垂直居中分为两种情况，一个是父级元素高度不固定，随着内容变化；另一个是父级元素高度固定。</p>
+<p>2.1父级元素高度不固定</p>
+<p>父级高度不固定的时，高度只能通过内部文本来撑开。这样，我们可以通过设置内填充（padding）的值来使文本看起来垂直居中，只需设置padding-top和padding-bottom的值相等：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--html代码--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div1&quot;</span>&gt;</span></span><br><span class="line">            这是多行文本垂直居中，</span><br><span class="line">            这是多行文本垂直居中，</span><br><span class="line">            这是多行文本垂直居中，</span><br><span class="line">            这是多行文本垂直居中。</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">/*css代码*/</span><br><span class="line">        #div1&#123;</span><br><span class="line">            width: 300px;</span><br><span class="line">            margin: 50px auto;</span><br><span class="line">            border: 1px solid red;</span><br><span class="line">            text-align: center; /*设置文本水平居中*/</span><br><span class="line">            padding: 50px 20px;/*通过内边距将盒子撑大实现居中*/</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.2父级元素高度固定</p>
+<p>本文一开始就提到css中的vertical-align属性，但是它只对拥有valign特性的元素才生效，结合display: table;，可以使得div模拟table属性。因此我们可以设置父级div的display属性：display: table;然后再添加一个div包含文本内容，设置其display:table-cell;和vertical-align:middle;。具体代码如下：</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style >
+        .middle-box{
+            display: table; 
+            height: 300px;
+            width: 400px;
+            border: 1px solid red ;
+        }
+        .middle-inner{
+            display: table-cell; 
+            vertical-align:middle; 
+            /* text-align:center; */
+        }
+    </style>
+</head>
+<body>
+    <div class="middle-box">
+        <div class="middle-inner">
+                缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、
+                ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7缺点就是不兼容ie6、ie7
+        </div>
+    </div>
+</body>
+</html>
+
 
                 
             </div>
@@ -498,7 +545,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/24/test/">http://example.com/2021/09/24/test/</a>
+                    <a href="http://example.com/2021/09/24/%E5%85%B3%E4%BA%8E%E6%96%87%E6%9C%AC%E5%9C%A8%E7%9B%92%E5%AD%90%E7%9A%84%E5%B1%85%E4%B8%AD/">http://example.com/2021/09/24/%E5%85%B3%E4%BA%8E%E6%96%87%E6%9C%AC%E5%9C%A8%E7%9B%92%E5%AD%90%E7%9A%84%E5%B1%85%E4%B8%AD/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -536,8 +583,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%88%B1%E4%BD%A0%E5%93%A6/">
-                                    <span class="chip bg-color">爱你哦</span>
+                                <a href="/tags/%E6%A0%B7%E5%BC%8F%E5%B8%83%E5%B1%80/">
+                                    <span class="chip bg-color">样式布局</span>
                                 </a>
                             
                         </div>
@@ -708,7 +755,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-09-24T09-34-11',
+        id: '2021-09-24T21-07-29',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -732,7 +779,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Fri Sep 24 2021 09:34:11 GMT+0800',
+    id: 'Fri Sep 24 2021 21:07:29 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -757,9 +804,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://example.com/2021/09/24/test/';
-        this.page.identifier = '/2021/09/24/test/';
-        this.page.title = 'test';
+        this.page.url = 'http://example.com/2021/09/24/%E5%85%B3%E4%BA%8E%E6%96%87%E6%9C%AC%E5%9C%A8%E7%9B%92%E5%AD%90%E7%9A%84%E5%B1%85%E4%B8%AD/';
+        this.page.identifier = '/2021/09/24/%E5%85%B3%E4%BA%8E%E6%96%87%E6%9C%AC%E5%9C%A8%E7%9B%92%E5%AD%90%E7%9A%84%E5%B1%85%E4%B8%AD/';
+        this.page.title = '关于文本在盒子的居中';
     };
     let disqus_shortname = '';
 
@@ -789,9 +836,10 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/09/24/%E5%85%B3%E4%BA%8E%E6%96%87%E6%9C%AC%E5%9C%A8%E7%9B%92%E5%AD%90%E7%9A%84%E5%B1%85%E4%B8%AD/">
                     <div class="card-image">
@@ -809,9 +857,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -824,6 +872,7 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -842,13 +891,13 @@ gitment.render('gitment-content');
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/21/hello-world/">
+                <a href="/2021/09/24/test/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="test">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">test</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -859,7 +908,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-24
                             </span>
                         <span class="publish-author">
                             
@@ -868,6 +917,14 @@ gitment.render('gitment-content');
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%88%B1%E4%BD%A0%E5%93%A6/">
+                        <span class="chip bg-color">爱你哦</span>
+                    </a>
+                    
                 </div>
                 
             </div>
