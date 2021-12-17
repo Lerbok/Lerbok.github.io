@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Numpy的一些方法和属性(没有例子), LerBok">
+    <meta name="keywords" content="MAVEN编译错误, LerBok">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Numpy的一些方法和属性(没有例子) | LerBok</title>
+    <title>MAVEN编译错误 | LerBok</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Numpy的一些方法和属性(没有例子)</h1>
+                    <h1 class="description center-align post-title">MAVEN编译错误</h1>
                 </div>
             </div>
         </div>
@@ -431,23 +431,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-Numpy/">
-                                <span class="chip bg-color">数据分析-Numpy</span>
+                            <a href="/tags/MAVEN/">
+                                <span class="chip bg-color">MAVEN</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/python/" class="post-category">
-                                python
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -456,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-12-05
+                    2021-12-17
                 </div>
                 
 
@@ -477,207 +468,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>一.Numpy 中的一维数组创建方法</p>
-<ol>
-<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([<span class="string">&#x27;longsang&#x27;</span>,<span class="string">&#x27;pychar&#x27;</span>,<span class="string">&#x27;made&#x27;</span>,<span class="string">&#x27;lisa&#x27;</span>], btype = np.unicode_)  <span class="comment"># 将数组中的字典元素转换成unicode字符编码集</span></span><br><span class="line"><span class="built_in">print</span> (a)</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>二.arange()函数</p>
-<ol start="2">
-<li><p>arange()函数创建数值范围并且返回数组的对象</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.arange(start, stop, step, dtype)</span><br></pre></td></tr></table></figure>
+                <p>1.在pom.xml文件添加这个 根据自己的版本号哦 记得改！！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;properties&gt;</span><br><span class="line">        &lt;project.build.sourceEncoding&gt;UTF-<span class="number">8</span>&lt;/project.build.sourceEncoding&gt;</span><br><span class="line">        &lt;maven.compiler.encoding&gt;UTF-<span class="number">8</span>&lt;/maven.compiler.encoding&gt;</span><br><span class="line">        &lt;java.version&gt;<span class="number">11</span>&lt;/java.version&gt;</span><br><span class="line">        &lt;maven.compiler.source&gt;<span class="number">11</span>&lt;/maven.compiler.source&gt;</span><br><span class="line">        &lt;maven.compiler.target&gt;<span class="number">11</span>&lt;/maven.compiler.target&gt;</span><br><span class="line">&lt;/properties&gt;  </span><br></pre></td></tr></table></figure>
 
-<p>start : 开始值，默认值是0， 包含开始值</p>
-<p>stop : 结束值，不包含结束值</p>
-<p>step : 补偿， 默认值是1，该值可以为负数</p>
-<p>dtype: 数组元素的类型</p>
-</li>
-</ol>
-<p>三.linspace()函数</p>
-<ol start="3">
-<li><p>创建等差数组</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.linspace(start, stop, num, endpoint, retstep,dtype)</span><br></pre></td></tr></table></figure>
 
-<p>num: 设置生成元素的个数</p>
-<p>endpoint: 设置是否包含结束值 默认为包含   即true</p>
-<p>retstep: 设置是否返回步长(即公差), 默认为false,  当值是True的时候，返回的是二元组，包括数组和步长</p>
-</li>
-</ol>
-<p>四. logspace()函数</p>
-<ol start="4">
-<li><p>创建等比数组</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.logspace(start, stop, num, endpoint, retstep,dtype)</span><br></pre></td></tr></table></figure>
 
-<p>start : 开始值，值为base**start</p>
-<p>stop: 结束值，值为base**stop</p>
-<p>base : 底数</p>
-</li>
-</ol>
-<p>五. 数组的轴</p>
-<ol start="5">
-<li><p>数组的转置  多元数组会有0 1 两个轴</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">a = np.array([1,3,5])</span><br><span class="line">print(a)</span><br><span class="line">b= np.array([[1,3,5],[2,4,6]])</span><br><span class="line">print(b)</span><br><span class="line"></span><br><span class="line">c =b.T  #  将数组三行两列 转置成两行三列</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>六. ones()函数</p>
-<ol start="6">
-<li><p>根据指定的形状和数组类型生成全部为1的数组</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.ones(shape,dtype=None)</span><br></pre></td></tr></table></figure>
-
-<p>shape : 数组的形状</p>
-</li>
-</ol>
-<p>七. zero()函数</p>
-<ol start="7">
-<li><p>根据指定的形状和数据的类型生成全部为0的数组</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.zeros(shape, dtype = None)</span><br></pre></td></tr></table></figure>
-
-<p>shape : 数组的形状</p>
-</li>
-</ol>
-<p>八. full()函数</p>
-<ol start="8">
-<li><p>根据指定的形状和数据类型生成数组，并且使用指定的数组填充</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.full(shape, fill_value, dtype= None)</span><br></pre></td></tr></table></figure>
-
-<p>fill_value : 指定填充的数据</p>
-</li>
-</ol>
-<p>九. identity()函数</p>
-<ol start="9">
-<li><p>创建单位矩阵(即对角线元素为1其他元素为0</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.identity(n, dtype= None)</span><br></pre></td></tr></table></figure>
-
-<p>n : 数组的形状</p>
-</li>
-</ol>
-<p>十. 连接数组  </p>
-<ol>
-<li><p>concatenate()函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.concatenate((a1, a2, ...), axis)</span><br></pre></td></tr></table></figure>
-
-<p>a1,a2 是要连接的数组   注意，除了指定的轴外  其它轴元素个数必须相等</p>
-<p>axis 是指沿指定轴的索引，默认为0轴</p>
-</li>
-<li><p>vstack()函数</p>
-<p>沿垂直堆叠多个数组， 相当于concatenate()函数axis=0 的情况</p>
-<p>ps :1轴上的元素个数要相同 </p>
-</li>
-<li><p>hstack()函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.hstack((a1, a2))</span><br></pre></td></tr></table></figure>
-
-<p>沿着水平堆叠多个数组，相当于concatenate()函数  axis= 0 的情况</p>
-<p>0轴上的元素个数一定要相同</p>
-</li>
-</ol>
-<p>十一. 分割函数</p>
-<ol>
-<li><p>split() </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.split(ary, indices_or_sections, axis)</span><br></pre></td></tr></table></figure>
-
-<p>该函数值沿着指定的轴分割多个数组</p>
-<p>ary: 要被分割的数组</p>
-<p>indeces_or_sections : 是一个整数或者数组，如果是整数就使用该数平均分割； 如果是数组，则为沿指定轴做切片操作</p>
-<p>axis : 指轴的分割方向，默认为0轴</p>
-</li>
-<li><p>vsplit()函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.vsplit(ary, indices_or_sections)</span><br></pre></td></tr></table></figure>
-
-<p>该函数指沿垂直方向分割数组，相当于split()函数axis=0的情况</p>
-</li>
-</ol>
-<p>​    </p>
-<ol start="3">
-<li>hasplit()函数  相当于split()函数  axis=1</li>
-</ol>
-<p>十二. 随机数函数</p>
-<ol>
-<li><p>rand() 返回[0.0, 1.0]的随机浮点数   即大于等于0.0， 且小于1.0的随机浮点数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.random.rand(d0, d1,..., dn)</span><br></pre></td></tr></table></figure>
-
-<p>d0, d1…, dn 表示数组的形状</p>
-</li>
-<li><p>randint()函数  返回[low,high]的随机整数，如果high省略，则会返回[0,low]的随机整数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.random.randint(low, high, size, dtype)</span><br></pre></td></tr></table></figure>
-
-<p>size表示数组的形状 (元组)</p>
-</li>
-<li><p>normal()函数返回正态分布随机数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.random.normal(loc, scale, size)</span><br></pre></td></tr></table></figure>
-
-<p>loc 表示平均值</p>
-<p>scale 表示标准差</p>
-</li>
-<li><p>randn()函数返回标准正太分布随机数，即平均数为0，标准差1的正态分布随机数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.random.rando(d0, d1,..., dn)</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>十三. 排序函数</p>
-<ol>
-<li><p>sort()函数按照轴对数组进行排序，即轴排序</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.sort(a, axis = -1, kind = &#x27;quicksort&#x27;,order = None)</span><br></pre></td></tr></table></figure>
-
-<p>a 表示要排序的数组</p>
-<p>axis 表示要排序的轴索引，默认是-1，表示最后一个轴，速度最快；mermesort: 归并排序; heapsort : 堆排序</p>
-<p>order 表示排序字段</p>
-</li>
-<li><p>argsort()函数按照轴对数组经行排序索引，即轴排序索引</p>
-</li>
-</ol>
-<p>​      </p>
-<p>十四. 聚合函数</p>
-<ol>
-<li><p>求和</p>
-<ol>
-<li><p>使用Numpy中的sum()函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.sum(a, axis = None)</span><br></pre></td></tr></table></figure></li>
-<li><p>使用Numpy中的nansum()函数,该书忽略NAN </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.nansum(a, axis = None)</span><br></pre></td></tr></table></figure></li>
-<li><p>使用数组对象的sum()方法</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">      </span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-<li><p>求最大值</p>
-<ol>
-<li><p>使用amax()函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.amax(a, axis = None)</span><br></pre></td></tr></table></figure></li>
-<li><p>使用nanmax()函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.nanmax(a, axis = None)</span><br></pre></td></tr></table></figure></li>
-<li><p>使用数组对象的max()方法</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.ndarray.max(axis = None)</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-<li><p>求小值</p>
-<ol>
-<li><p>使用amin()函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.amin(a, axis = None)</span><br></pre></td></tr></table></figure></li>
-<li><p>使用nanmin()函数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.nanmin(a, axis = None)</span><br></pre></td></tr></table></figure></li>
-<li><p>使用数组对象的min()方法</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.ndarray.min(axis = None)</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ol>
-<p>十四.数组的保存</p>
-<ol>
-<li><p>save()该函数可以将一个数组保存至后缀名为“.npy”的二进制文件中</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.save(file,arr,allow_pickle=True, fix_imports=True)</span><br></pre></td></tr></table></figure>
-
-<p>file 表示文件名/文件的路径</p>
-<p>arr 表示要储存的数组</p>
-<p>allow_pickle  为布尔值,表示是否使用pickle来保存数组对象</p>
-<p>fix_imports  为布尔值,表示是否允许在Pyhton2中读取python3保存的数据</p>
-</li>
-<li><p>savez()该函数可以将一个数组保存至未压缩的后缀名为“.npz”的二进制文件中</p>
-</li>
-<li><p>savez_compressed()函数可以将多个数组保存到压缩的后缀名为“.npz”的二进制文件中</p>
-</li>
-</ol>
-<p>十五.load()函数</p>
-<ol>
-<li><p>读取 .npy 和.npz文件中的数组</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numpy.load(file, mmap_mode, allow_pickle,fix_impoerts)</span><br></pre></td></tr></table></figure>
-
-<p>mmap_mode表示内存的映射模式，即在读取较大的Numpy数组时候的模式，默认情况下是None</p>
-</li>
-</ol>
 
                 
             </div>
@@ -704,7 +499,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/12/05/Numpy%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7(%E6%B2%A1%E6%9C%89%E4%BE%8B%E5%AD%90)/">http://example.com/2021/12/05/Numpy%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7(%E6%B2%A1%E6%9C%89%E4%BE%8B%E5%AD%90)/</a>
+                    <a href="http://example.com/2021/12/17/MAVEN%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99/">http://example.com/2021/12/17/MAVEN%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -742,8 +537,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-Numpy/">
-                                    <span class="chip bg-color">数据分析-Numpy</span>
+                                <a href="/tags/MAVEN/">
+                                    <span class="chip bg-color">MAVEN</span>
                                 </a>
                             
                         </div>
@@ -914,7 +709,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2021-12-05T20-59-24',
+        id: '2021-12-17T16-01-33',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -938,7 +733,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sun Dec 05 2021 20:59:24 GMT+0800',
+    id: 'Fri Dec 17 2021 16:01:33 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -963,9 +758,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://example.com/2021/12/05/Numpy%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7(%E6%B2%A1%E6%9C%89%E4%BE%8B%E5%AD%90)/';
-        this.page.identifier = '/2021/12/05/Numpy%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7(%E6%B2%A1%E6%9C%89%E4%BE%8B%E5%AD%90)/';
-        this.page.title = 'Numpy的一些方法和属性(没有例子)';
+        this.page.url = 'http://example.com/2021/12/17/MAVEN%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99/';
+        this.page.identifier = '/2021/12/17/MAVEN%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99/';
+        this.page.title = 'MAVEN编译错误';
     };
     let disqus_shortname = '';
 
@@ -995,9 +790,10 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/12/17/MAVEN%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99/">
                     <div class="card-image">
@@ -1015,9 +811,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1026,6 +822,7 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1044,13 +841,13 @@ gitment.render('gitment-content');
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/14/urllib%E5%92%8Crequest/">
+                <a href="/2021/12/05/Numpy%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7(%E6%B2%A1%E6%9C%89%E4%BE%8B%E5%AD%90)/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="111">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Numpy的一些方法和属性(没有例子)">
                         
-                        <span class="card-title">111</span>
+                        <span class="card-title">Numpy的一些方法和属性(没有例子)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1061,15 +858,27 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-05
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            YYx
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-Numpy/">
+                        <span class="chip bg-color">数据分析-Numpy</span>
+                    </a>
+                    
                 </div>
                 
             </div>
